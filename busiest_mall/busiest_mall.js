@@ -35,6 +35,7 @@ function findBusiestPeriod(data){
 
     for (let i = 0; i < data.length; i ++){
         // update count
+        console.log('starting count', count)
       if (data[i][2] == 1){ //# visitors entered the mall  
           count += data[i][1]
       } else if (data[i][2] == 0){ //# visitors existed the mall
@@ -49,8 +50,9 @@ function findBusiestPeriod(data){
           maxCount = count
           maxPeriodTime = data[i][0]
       }
+      console.log("count", count)
     }
-    return maxPeriodTime;
+    return //maxPeriodTime;
 }
 
 data = [ [1487799425, 14, 1], 
