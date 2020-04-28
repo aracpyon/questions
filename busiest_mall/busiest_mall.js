@@ -47,12 +47,13 @@ function findBusiestPeriod(data){
       }
         // update maximum
       if (count > maxCount){
-          maxCount = count
-          maxPeriodTime = data[i][0]
+        maxCount = count
+        maxPeriodTime = data[i][0]
+        console.log("maxTime", maxPeriodTime)
       }
       console.log("count", count)
     }
-    return //maxPeriodTime;
+    return maxPeriodTime;
 }
 
 data = [ [1487799425, 14, 1], 
@@ -64,5 +65,7 @@ data = [ [1487799425, 14, 1],
                  [1487901013, 1,  0],
                  [1487901211, 7,  1],
                  [1487901211, 7,  0] ]
-findBusiestPeriod(data);
+
+data2 = [[1487799425,14,1],[1487799425,4,0],[1487799425,2,0],[1487800378,10,1],[1487801478,18,0],[1487801478,19,1],[1487801478,1,0],[1487801478,1,1],[1487901013,1,0],[1487901211,7,1],[1487901211,8,0]]
+console.log(findBusiestPeriod(data2));
 //answer = 1487800378
